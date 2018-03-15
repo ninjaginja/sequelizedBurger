@@ -1,0 +1,50 @@
+<div class="jumbotron jumbotron-fluid">
+  <img src="/assets/img/burger.png" width="150px">
+
+  <h1>Eat-Da-Burger!</h1>
+
+  <form id="create-form">
+
+    <div class="form-group">
+      <label for="burger-name">Enter burger name:</label>
+      <input type="text" id="burger-name" name="name">
+    </div>
+
+    <button id="add-button" type="submit">Add Burger</button>
+  </form>
+
+  <br>
+  <p>Enter a burger you'd like to eat and click submit.</p>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Burgers Created</h3>
+      <ul class="list-group">
+        {{#each burgers}}
+          {{#unless devoured}}
+            <li class="list-group-item">
+              {{burger_name}}
+               <button class="devour-burger" data-id="{{this.id}}">Devour It!</button>
+            </li>
+          {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+
+
+    <div class="col-md-6">
+      <h3>Burgers Devoured</h3>
+      <ul class="list-group">
+        {{#each burgers}}
+          {{#if devoured}}
+            <li class="list-group-item">
+              {{burger_name}}
+            </li>
+          {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>

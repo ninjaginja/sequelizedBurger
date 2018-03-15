@@ -1,0 +1,18 @@
+.jumbotron {
+  text-align: center;
+}
+
+#add-button {
+  background-color: #09bc33;
+  color: #ffffff;
+  padding: 10px;
+  border: none;
+}
+
+.devour-burger {
+  background-color: #ed4f07;
+  color: #ffffff;
+  padding: 5px;
+  border: none;
+  margin-left: 20px;
+}
